@@ -17,8 +17,10 @@ function Home() {
   let navigate = useNavigate();
 
   useEffect(() => {
+    console.log('useEffect-1');
 
     if (localStorage.getItem("userEmail") !== null) {
+      console.log('useEffect-3');
       fetch("http://localhost:8000/home", {
         method: "GET",
         credentials: "include",
@@ -40,15 +42,17 @@ function Home() {
           data.user && localStorage.setItem("userEmail", data.user.email);
           localStorage.setItem("authentication", "true");
           sessionStorage.setItem("activeSession", "true");
-          navigate("/home");
+          // navigate("/home");
           // window.location.reload(false);
           // }
         });
     }
-  }, []);
+}, []);
 
   useEffect(() => {
+    console.log('useEffect-2');
     if (localStorage.getItem("userEmail") === null) {
+      console.log('useEffect-4');
       fetch("http://localhost:8000/auth/login/success", {
         method: "GET",
         credentials: "include",
@@ -72,11 +76,11 @@ function Home() {
           localStorage.setItem("userEmail", data.user.email);
           localStorage.setItem("authentication", "true");
           sessionStorage.setItem("activeSession", "true");
-          navigate("/home");
+          // navigate("/home");
           window.location.reload(false);
         });
     }
-  }, []);
+}, []);
 
 
   console.log("currUser-> ", currUser);

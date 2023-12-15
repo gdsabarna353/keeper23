@@ -21,7 +21,7 @@ function Home() {
 
     if (localStorage.getItem("userEmail") !== null) {
       console.log('useEffect-3');
-      fetch("http://localhost:8000/home", {
+      fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/home", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -53,7 +53,7 @@ function Home() {
     console.log('useEffect-2');
     if (localStorage.getItem("userEmail") === null) {
       console.log('useEffect-4');
-      fetch("http://localhost:8000/auth/login/success", {
+      fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
@@ -89,7 +89,7 @@ function Home() {
   function addNote(obj) {
     console.log("add is called");
     console.log(obj);
-    fetch("http://localhost:8000/home", {
+    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/home", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ function Home() {
     // });
     // setNotes(newNotes);
 
-    fetch("http://localhost:8000/delete", {
+    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/delete", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,7 +147,7 @@ function Home() {
     console.log(id, obj);
     console.log("edit is called");
 
-    fetch("http://localhost:8000/edit", {
+    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/edit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

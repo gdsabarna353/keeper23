@@ -63,7 +63,7 @@ export default function Profile(props) {
 
   function updateContact() {
     console.log("updated contact value-> ", contact);
-    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/editProfile", {
+    fetch("https://keeper23.vercel.app/editProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ export default function Profile(props) {
 
   function updateState() {
     console.log("updated state value-> ", state);
-    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/editProfile", {
+    fetch("https://keeper23.vercel.app/editProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default function Profile(props) {
 
   function updateCountry() {
     console.log("updated country value-> ", country);
-    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/editProfile", {
+    fetch("https://keeper23.vercel.app/editProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export default function Profile(props) {
   }
 
   useEffect(() => {
-    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/profile", {
+    fetch("https://keeper23.vercel.app/profile", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

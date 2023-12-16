@@ -193,7 +193,7 @@ function SignUp() {
 
 
 
-      fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/validate", {
+      fetch("https://keeper23.vercel.app/validate", {
         method: "POST",
         // headers: { "Content-Type": "multipart/form-data" },
         body: formData,
@@ -312,7 +312,7 @@ function SignUp() {
 
       // console.log("newfile-> ", newFile);
 
-      fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/signup", {
+      fetch("https://keeper23.vercel.app/signup", {
         method: "POST",
         // headers: { "Content-Type": "multipart/form-data" },
         body: formData,

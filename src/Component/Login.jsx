@@ -37,7 +37,7 @@ function Login() {
     //   }
     // });
 
-    window.open("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/auth/google", "_self");
+    window.open("https://keeper23.vercel.app/auth/google", "_self");
 
     // fetch("http://localhost:8000/auth/google/home", {
     //   // mode: "no-cors",
@@ -56,7 +56,7 @@ function Login() {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/login", {
+    fetch("https://keeper23.vercel.app/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: login.Email, password: login.Password }),

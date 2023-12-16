@@ -21,7 +21,7 @@ const Header = (props) => {
   const [profileView, setProfileView] = useState(false);
 
   const handleLogout = () =>{
-    window.open("https://keeper23-d6uyevq8p-gdsabarna353s-projects.vercel.app/auth/logout", "_self");
+    window.open("https://keeper23.vercel.app/auth/logout", "_self");
     localStorage.removeItem("userEmail");
     localStorage.removeItem("userImage");
     localStorage.removeItem("authentication");

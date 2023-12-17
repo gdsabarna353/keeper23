@@ -37,7 +37,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: "https://chimerical-kitsune-0bd341.netlify.app",
+    origin: "https://imaginative-flan-a59914.netlify.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
@@ -767,7 +767,7 @@ app.get("/auth/login/success", async (req, res) => {
 
 app.get("/auth/logout", (req, res) => {
   req.logout();
-  res.redirect("https://chimerical-kitsune-0bd341.netlify.app/home");
+  res.redirect("https://imaginative-flan-a59914.netlify.app/home");
 });
 
 app.get(
@@ -778,8 +778,8 @@ app.get(
 app.get(
   "/auth/google/home",
   passport.authenticate("google", {
-    successRedirect: "https://chimerical-kitsune-0bd341.netlify.app/home",
-    failureRedirect: "https://chimerical-kitsune-0bd341.netlify.app/login",
+    successRedirect: "https://imaginative-flan-a59914.netlify.app/home",
+    failureRedirect: "https://imaginative-flan-a59914.netlify.app/login",
   })
 );
 

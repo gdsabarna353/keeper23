@@ -3,8 +3,7 @@
     "buildCommand": "npm install",
     "builds": [
       {
-        "src": "server.js",
-        "use": "npm install"
+        "src": "server.js"
       }
     ],
     "routes": [

@@ -1,6 +1,12 @@
 {
     "version": 2,
     "buildCommand": "npm install",
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "npm install"
+      }
+    ],
     "routes": [
       {
         "src": "/(.*)",

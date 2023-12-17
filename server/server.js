@@ -18,10 +18,12 @@ var GoogleStrategy = require("passport-google-oauth20").Strategy;
 const app = express();
 const port = process.env.PORT || 8000;
 
-// const buildPath = path.join(__dirname, '../build');
+const buildPath = path.join(__dirname, 'build');
 
 app.use(express.json());
 app.use(bodyParser.json());
+// app.use(express.static("public"));
+// app.use(express.static(buildPath));
 app.use(express.static('build'));
 
 app.use(
@@ -679,7 +681,6 @@ app.post(
             console.log("cc2-> ", countryCode);
             console.log("req-contact-2-> ", req.body.Contact);
 
-
             var locaFilePath = req.file.destination + '/' + req.file.filename;
             var imageUrl = "";
             console.log("locapath-> ", locaFilePath);
@@ -689,7 +690,7 @@ app.post(
 		          imageUrl = result.url;
               console.log("imageurl-cloud-> ", imageUrl);
             });
-
+            
             const user2 = new User({
               name: req.body.Name,
               // photo: "/uploads/" + req.file.filename,

@@ -58,7 +58,7 @@ mongoose.connect(
 );
 
 if (!fs.existsSync("./uploads")) { 
-	fs.mkdirSync("./uploads"); 
+	fs.mkdirSync("uploads"); 
 } 
 
 var multer = require("multer");
